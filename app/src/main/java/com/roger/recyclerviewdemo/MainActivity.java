@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.roger.recyclerviewdemo.baseadapter.DemoAdapterActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.setMyItemClickListener(new MyItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+
+                startActivity(new Intent(MainActivity.this, DemoAdapterActivity.class));
                 Toast.makeText(MainActivity.this, (String) list.get(position)
                         .get("title"), Toast.LENGTH_SHORT).show();
             }

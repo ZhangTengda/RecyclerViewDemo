@@ -15,7 +15,7 @@ import com.roger.recyclerviewdemo.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoAdapterActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+public class BaseAdapterActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     private List<DataBean> dataList = new ArrayList<>();
     private DemoAdapter adapter;
@@ -25,7 +25,7 @@ public class DemoAdapterActivity extends AppCompatActivity implements SwipeRefre
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo);
+        setContentView(R.layout.activity_base_demo);
 
         swipeRefreshLayout = findViewById(R.id.swiperefresh);
 

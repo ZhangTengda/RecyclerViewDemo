@@ -9,7 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.roger.recyclerviewdemo.baseadapter.DemoAdapterActivity;
+import com.roger.recyclerviewdemo.baseadapter.BaseAdapterActivity;
+import com.roger.recyclerviewdemo.demo.DemoActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int position) {
 
-                startActivity(new Intent(MainActivity.this, DemoAdapterActivity.class));
+                startActivity(new Intent(MainActivity.this, DemoActivity.class));
                 Toast.makeText(MainActivity.this, (String) list.get(position)
                         .get("title"), Toast.LENGTH_SHORT).show();
             }
